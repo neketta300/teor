@@ -1,4 +1,4 @@
-# 🏆 Подготовка к IT CHALLENGE 2026 — Все направления
+# Все направления
 
 ## 📁 Полная структура проекта
 
@@ -35,7 +35,7 @@ C:\it chalenge\
 
 ## 🚀 Порядок изучения
 
-### НЕДЕЛЯ 1-2: Python основы
+### Python основы
 1. ✅ `python_basics/numpy_tutorial.py` — массивы, математика, ML-задачи
 2. ✅ `python_basics/pandas_tutorial.py` — таблицы, фильтрация, группировка
 3. ✅ `python_basics/algorithms_basics.py` — сортировки, k-NN, расстояния
@@ -45,7 +45,7 @@ C:\it chalenge\
 python "C:\it chalenge\python_basics\numpy_tutorial.py"
 ```
 
-### НЕДЕЛЯ 3-4: Машинное обучение
+### Машинное обучение
 1. ✅ `ml_tasks/01_classification/churn_prediction.py` — классификация
 2. ✅ `ml_tasks/02_regression/car_price_prediction.py` — регрессия
 3. ✅ `ml_tasks/03_clustering/customer_segmentation.py` — кластеризация
@@ -57,7 +57,7 @@ python "C:\it chalenge\python_basics\numpy_tutorial.py"
 - Silhouette, Elbow, Inertia (кластеризация)
 - Train/Test split, масштабирование, кросс-валидация
 
-### НЕДЕЛЯ 5-6: Анализ данных
+### Анализ данных
 1. ✅ `data_analysis/exploratory_data_analysis.py` — EDA, визуализация, статистика
 2. ✅ `data_analysis/ab_testing.py` — A/B тестирование
 
@@ -66,7 +66,7 @@ python "C:\it chalenge\python_basics\numpy_tutorial.py"
 - t-test, ANOVA, Chi-square, Shapiro-Wilk
 - Доверительные интервалы, p-value
 
-### НЕДЕЛЯ 7: Кибербезопасность
+### Кибербезопасность
 1. ✅ `cybersecurity/web_security_cheatsheet.md` — изучить шпаргалку
 2. ✅ `cybersecurity/log_analysis.py` — анализ логов
 
@@ -75,83 +75,11 @@ python "C:\it chalenge\python_basics\numpy_tutorial.py"
 - DevTools, Burp Suite, ffuf, dirsearch
 - HTTP-методы, коды ответов, заголовки
 
-### НЕДЕЛЯ 8: Повторение и практика
+### Повторение и практика
 - Реши `practice_tasks.py` БЕЗ подсказок
-- Засекай время (2-3 часа на задачу)
 - Повтори шпаргалки
 
-## 📋 Чек-лист навыков
-
-### Python основы
-- [ ] List comprehensions
-- [ ] Lambda-функции, map, filter
-- [ ] Словари, подсчёт частот
-- [ ] Сортировка (в т.ч. по ключу)
-- [ ] Чтение/запись CSV
-
-### NumPy
-- [ ] Создание массивов
-- [ ] Индексация и срезы
-- [ ] Математические операции
-- [ ] Reshape, flatten
-- [ ] Статистика (mean, std, min, max)
-- [ ] Нормализация, стандартизация
-
-### Pandas
-- [ ] Создание DataFrame
-- [ ] Фильтрация по условию
-- [ ] Группировка (groupby)
-- [ ] Обработка пропусков
-- [ ] One-Hot Encoding
-- [ ] merge (join)
-
-### Машинное обучение — Классификация
-- [ ] Train/test split
-- [ ] Масштабирование признаков
-- [ ] Logistic Regression
-- [ ] Random Forest
-- [ ] Gradient Boosting
-- [ ] Метрики: accuracy, precision, recall, F1, ROC-AUC
-- [ ] Confusion matrix
-- [ ] Важность признаков
-
-### Машинное обучение — Регрессия
-- [ ] Linear Regression
-- [ ] Ridge / Lasso
-- [ ] RandomForestRegressor
-- [ ] GradientBoostingRegressor
-- [ ] Метрики: MAE, MSE, RMSE, R²
-- [ ] Кросс-валидация
-
-### Машинное обучение — Кластеризация
-- [ ] K-Means
-- [ ] DBSCAN
-- [ ] Elbow method
-- [ ] Silhouette score
-- [ ] Характеристика кластеров
-- [ ] Визуализация (PCA)
-
-### Анализ данных
-- [ ] Гистограммы, boxplot, scatter plot
-- [ ] Heatmap корреляций
-- [ ] Временные ряды
-- [ ] t-test (2 группы)
-- [ ] ANOVA (3+ групп)
-- [ ] Chi-square (категориальные)
-- [ ] A/B тестирование
-- [ ] Доверительные интервалы
-
-### Кибербезопасность
-- [ ] DevTools (Network, Console, Sources)
-- [ ] HTTP-методы и коды ответов
-- [ ] SQL-инъекции (обнаружение)
-- [ ] XSS (обнаружение)
-- [ ] Сканирование директорий
-- [ ] Brute-force (обнаружение)
-- [ ] Анализ HTTP-логов
-- [ ] OWASP Top 10 (понимание)
-
-## 💡 Советы для олимпиады
+## 💡 Советы 
 
 1. **Начинай с простой модели** (Logistic/Linear Regression) — это даст базовый результат
 2. **Random Forest — хороший выбор по умолчанию** для большинства задач
@@ -195,6 +123,3 @@ pip install statsmodels
 
 ---
 
-**Удачи на олимпиаде! 🇧🇾🏆**
-
-*Создано для подготовки к IT CHALLENGE 2026, Республика Беларусь*
