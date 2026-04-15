@@ -201,6 +201,56 @@ git push -u origin feature/название-задачи
 Если нужно, могу показать пример с настройкой SSH-ключа, настройкой `.gitignore` или автоматическим CI/CD пайплайном.
 
 
+
+PAV, [15 апр. 2026 в 10:04]
+def run_rfecv_recursive_pro(model_input, X_df, y, X_val, y_val, features_list, 
+                                 side="LONG", target_mcc=0.8, max_global_attempts=1,
+                                 priority_seeds=[1253, 5421, 2773, 6829, 3095, 6732, 6987, 6950, 1236, 1025, 9459, 6284, 7740, 3467, 1519, 5568, 3492, 4470]):
+        
+        # 1. Извлекаем параметры
+        if hasattr(model_input, 'get_params'):
+            base_params = model_input.get_params()
+        else:
+            base_params = copy.deepcopy(model_input)
+
+        forbidden_keys = ['n_estimators', 'missing', 'n_jobs', 'estimator', 'model_params']
+        for key in forbidden_keys:
+            base_params.pop(key, None)
+
+        initial_features = list(dict.fromkeys([f for f in features_list if f in X_df.columns]))
+        y_val_arr = y_val.values if hasattr(y_val, 'values') else y_val
+        
+        # Изначально лучшие — это все фичи и первый сид из твоего списка
+        best_global_mcc = 0 # Начинаем с минуса, чтобы любой первый результат стал рекордом
+        best_global_features = initial_features.copy()
+        best_overall_seed = priority_seeds[0] if priority_seeds else 42
+        
+        used_seeds = set()
+
+        try:
+            for g_attempt in range(1, max_global_attempts + 1):
+                current_features = initial_features.copy()
+                current_best_local_mcc = 0
+                
+                while len(current_features) > 15:
+                    n_curr = len(current_features)
+                    if n_curr > 500: step, pat_limit = 0.35, 60
+                    elif n_curr > 100: step, pat_limit = 0.20, 60
+                    else: step, pat_limit = 0.15, 60
+                    
+                    n_to_select = max(10, int(n_curr * (1 - step)))
+                    patience, step_success = pat_limit, False
+                    
+                    dtrain_full = xgb.DMatrix(X_df[current_features], label=y)
+                    
+                    # Очередь сидов: сначала приоритетные, потом рандом
+                    seeds_queue = priority_seeds.copy()
+                    search_radius = 0 
+                    local_base_seed = best_overall_seed
+
+
+
+
 **Всего: ~4,600+ строк кода и документации**
 
 ---
